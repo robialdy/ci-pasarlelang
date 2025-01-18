@@ -1,15 +1,16 @@
 <?php $this->load->view('template/header') ?>
-<div class="section-header">
+<!-- <div class="section-header">
 	<h1>User</h1>
-</div>
+</div> -->
 
 <div class="section-body">
 
 	<div class="row">
 		<div class="col-12">
 			<div class="card">
-				<div class="card-header">
-					<h4>Table</h4>
+				<div class="card-header justify-content-between">
+					<h4>Table Users</h4>
+					<a href="<?= base_url('') ?>" class="btn btn-primary">Create</a>
 				</div>
 				<div class="card-body">
 					<div class="table-responsive">

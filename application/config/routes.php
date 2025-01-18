@@ -49,6 +49,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'admin/Categories';
+$route['default_controller'] = 'landingpage';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+// CUSTOM ROUTE
+// (penangan di custom url karena satu controller ada pemisah antara admin & user)
+// USERS
+$route['admin/user-account'] = 'admin/users/indexUser';
