@@ -27,6 +27,7 @@ class Users extends CI_Controller
 	{
 		$this->db->where('id_user', $id);
 		$this->db->update('users', ['status' => 'Validated']);
+		$this->session->set_flashdata('success', 'Account Sekarang Tervalidasi!');
 		redirect('admin/user-account');
 	}
 }

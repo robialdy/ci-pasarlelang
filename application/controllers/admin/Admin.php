@@ -42,6 +42,7 @@ class Admin extends CI_Controller
 			$this->load->view('admin/admin-account/create', $data);
 		} else {
 			$this->Model_Users->insertAdmin();
+			$this->session->set_flashdata('success', 'Account Admin Ditambahkan!');
 			redirect('admin/admin-account');
 		}
 	}
@@ -65,6 +66,7 @@ class Admin extends CI_Controller
 			$this->load->view('admin/admin-account/edit', $data);
 		} else {
 			$this->Model_Users->updateAdmin($slug);
+			$this->session->set_flashdata('success', 'Account Telah Diupdate!');
 			redirect('admin/admin-account');
 		}
 	}

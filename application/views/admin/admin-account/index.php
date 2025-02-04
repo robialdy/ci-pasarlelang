@@ -2,6 +2,27 @@
 <!-- <div class="section-header">
 	<h1>User</h1>
 </div> -->
+<?php if ($this->session->flashdata('success')): ?>
+	<script>
+		Swal.fire({
+			icon: 'success',
+			text: '<?= $this->session->flashdata('success') ?>',
+			toast: true,
+			position: 'top-end',
+			showConfirmButton: false,
+			timer: 3500,
+			timerProgressBar: true,
+			width: 450,
+			padding: '1em',
+			iconColor: '#4CAF50',
+			didOpen: (toast) => {
+				toast.style.borderRadius = '8px'; // Membuat sudut lebih halus
+				toast.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.2)'; // Efek shadow untuk floating
+				document.querySelector('.swal2-container').style.pointerEvents = 'none'; // Menghindari block area di luar toast
+			}
+		});
+	</script>
+<?php endif  ?>
 
 <div class="section-body">
 
@@ -41,7 +62,7 @@
 										<td><?= $admin->no_handphone ?></td>
 										<td><?= $admin->address ?></td>
 										<td>
-											<a href="<?= base_url('admin/admin-account/edit/'. $admin->slug) ?>"><i class="bi bi-pencil-square text-primary" style="font-size:20px;"></i></a>
+											<a href="<?= base_url('admin/admin-account/edit/' . $admin->slug) ?>"><i class="bi bi-pencil-square text-primary" style="font-size:20px;"></i></a>
 										</td>
 									</tr>
 								<?php endforeach; ?>
