@@ -58,6 +58,3 @@ $route['translate_uri_dashes'] = FALSE;
 // USERS
 $route['admin/user-account'] = 'admin/users';
 // ADMIN
-$route['admin/admin-account'] = 'admin/admin';
-$route['admin/admin-account/create'] = 'admin/admin/create';
-$route['admin/admin-account/edit/(:any)'] = 'admin/admin/edit/$1';

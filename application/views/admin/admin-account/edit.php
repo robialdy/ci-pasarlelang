@@ -1,14 +1,8 @@
 <?php $this->load->view('admin/template/header') ?>
 
-<div class="section-header">
-	<h1>Edit Admin</h1>
-	<div class="section-header-breadcrumb">
-		<div class="breadcrumb-item active"><a href="<?= base_url('admin/admin-account') ?>">Admin Account</a></div>
-		<div class="breadcrumb-item">Edit</div>
-	</div>
-</div>
+<div class="container-fluid">
 
-<div class="section-body">
+	<h1 class="h3 mb-3 text-gray-800">Edit Admin Account</h1>
 
 	<div class="row">
 		<div class="col">
@@ -18,7 +12,7 @@
 				</div>
 
 				<div class="card-body">
-					<form method="POST" action="<?= base_url('admin/admin/edit/' . $account->slug) ?>">
+					<form method="POST" action="<?= base_url('admin/account/edit/' . $account->slug) ?>">
 						<div class="row">
 							<div class="form-group col-6">
 								<label for="frist_name">Nama Depan</label>
@@ -85,7 +79,6 @@
 			</div>
 		</div>
 	</div>
-
 </div>
 
 <?php $this->load->view('admin/template/footer') ?>

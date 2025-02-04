@@ -116,4 +116,10 @@ class Model_Users extends CI_Model
 		$this->db->where('slug', $slug);
 		$this->db->update('users', $form_data);
 	}
+
+	public function delete($slug)
+	{
+		$this->db->where('slug', $slug);
+		$this->db->delete('users');
+	}
 }

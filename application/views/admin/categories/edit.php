@@ -1,22 +1,13 @@
+
 <?php $this->load->view('admin/template/header') ?>
 
-<div class="section-header">
-	<h1>Edit Categories</h1>
-	<div class="section-header-breadcrumb">
-		<div class="breadcrumb-item active"><a href="<?= base_url('admin/categories') ?>">Categories</a></div>
-		<div class="breadcrumb-item">Edit</div>
-	</div>
-</div>
+<div class="container-fluid">
 
-<div class="section-body">
+	<h1 class="h3 mb-3 text-gray-800">Edit Categories</h1>
 
 	<div class="row">
 		<div class="col">
 			<div class="card card-primary">
-				<div class="card-header">
-					<h4>Form</h4>
-				</div>
-
 				<div class="card-body">
 					<form method="POST" action="<?= base_url('admin/categories/edit/' . $categories->title) ?>">
 						<div class="row">
@@ -43,7 +34,6 @@
 			</div>
 		</div>
 	</div>
-
 </div>
 
 <?php $this->load->view('admin/template/footer') ?>

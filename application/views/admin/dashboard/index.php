@@ -1,14 +1,11 @@
 <?php $this->load->view('admin/template/header') ?>
 
-<div class="section-header">
-	<h1>Dashboard</h1>
-	<div class="section-header-breadcrumb">
-		<div class="breadcrumb-item">Dashboard</div>
-	</div>
-</div>
+<div class="container-fluid">
 
-<div class="section-body">
+	<!-- Page Heading -->
+	<h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
 
 </div>
+
 
 <?php $this->load->view('admin/template/footer') ?>
