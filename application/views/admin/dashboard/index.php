@@ -1,4 +1,4 @@
-<?php $this->load->view('template/header') ?>
+<?php $this->load->view('admin/template/header') ?>
 
 <div class="section-header">
 	<h1>Dashboard</h1>
@@ -11,4 +11,4 @@
 
 </div>
 
-<?php $this->load->view('template/footer') ?>
+<?php $this->load->view('admin/template/footer') ?>

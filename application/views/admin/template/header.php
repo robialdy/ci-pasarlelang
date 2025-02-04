@@ -5,10 +5,13 @@
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
 	<title><?= $title ?></title>
+	<!-- sweetalert test -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 	<!-- General CSS Files -->
 	<link rel="stylesheet" href="<?= base_url() ?>public/assets/modules/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?= base_url() ?>public/assets/modules/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 	<!-- CSS Libraries -->
 	<link rel="stylesheet" href="<?= base_url() ?>public/assets/modules/datatables/datatables.min.css" />
@@ -151,12 +154,14 @@
 
 						<li class="menu-header">Menu</li>
 
+						<li class="<?= $this->uri->segment(2) == 'categories' ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url('admin/categories') ?>"><i class="fas fa-th-large"></i> <span>Categories</span></a></li>
+
 						<li class="dropdown <?= $this->uri->segment(2) == 'user-account' || $this->uri->segment(2) == 'admin-account' ? 'active' : '' ?>">
 							<a href="#" class="nav-link has-dropdown"><i class="fas fa-user"></i><span>Account</span></a>
 
 							<ul class="dropdown-menu">
 								<li class="<?= $this->uri->segment(2) == 'user-account' ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url('admin/user-account') ?>">Users</a></li>
-								<li class="<?= $this->uri->segment(2) == 'admin-account' ? 'active' : '' ?>"><a class="nav-link" href="index.html">Admin</a></li>
+								<li class="<?= $this->uri->segment(2) == 'admin-account' ? 'active' : '' ?>"><a class="nav-link" href="<?= base_url('admin/admin-account') ?>">Admin</a></li>
 							</ul>
 						</li>
 					</ul>

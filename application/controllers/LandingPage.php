@@ -16,6 +16,6 @@ class LandingPage extends CI_Controller
 			'title' => 'Pasar Lelang '
 		];
 
-		$this->load->view('landing_page/index', $data);
+		$this->load->view('user/landing_page/index', $data);
 	}
 }

@@ -10,15 +10,23 @@ class Users extends CI_Controller
 		$this->load->model('Model_Users');
 	}
 
-	// REGISTRASI USER
-	public function indexUser()
+	// USER
+	public function index()
 	{
 		$data = [
 			'title' => 'User Account',
 			// data akun
 			'user' => $this->user,
-			'users' => $this->Model_Users->read(),
+			'userValidateds' => $this->Model_Users->readAccountUserValidated(),
+			'userNotValidateds' => $this->Model_Users->readAccountUserNotValidated(),
 		];
-		$this->load->view('admin/users/index', $data);
+		$this->load->view('admin/user-account/index', $data);
+	}
+
+	public function AccountUserValidated($id)
+	{
+		$this->db->where('id_user', $id);
+		$this->db->update('users', ['status' => 'Validated']);
+		redirect('admin/user-account');
 	}
 }
